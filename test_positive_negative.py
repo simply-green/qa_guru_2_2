@@ -26,7 +26,7 @@ def configure_negative():
 def test_negative(configure_negative):
     #Проверяем негативный вариант
     browser.element('[name="q"]').should(be.blank).type('gomez').press_enter()
-    browser.element('[id="search"]').should(have.text('Selene - User-oriented Web UI browser tests in Python'))
+    browser.element('[id="search"]').should(have.no.text('Selene - User-oriented Web UI browser tests in Python'))
 
 
 
